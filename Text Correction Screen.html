@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Intelligent Text Correction Platform</title>
+  <!-- CSS styles can go here -->
+  <style>
+    /* Internal CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: lightblue;     margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+    }
+    .header {
+      text-align: center;
+      padding: 20px;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: white;
+      padding: 10px 0;
+    }
+    .nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      padding: 5px;
+    }
+    .nav a:hover {
+      color: blue;  
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .text-area {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 20px;
+      padding: 10px;
+      resize: vertical;
+      border: 2px solid black;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .button-group {
+      display: flex;  
+      justify-content: space-around;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .button {
+      width: 120px;
+      height: 40px;
+      border-radius: 5px;
+      background-color: white;
+      border: 2px solid black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .button:hover {
+      background-color: blue;
+      color: white;
+    }
+    .report {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    .report th, .report td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+    .report th {
+      background-color: lightgray;
+    }
+    .footer {
+      text-align: center;  
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header with logo and title -->
+    <div class="header">
+      <img src="logo.png" alt="logo" class="logo">
+      <h1>Intelligent Text Correction Platform</h1>
+    </div>
+    
+    <!-- Navigation links -->
+    <div class="nav">
+      <a href="Home Screen.html">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Feedback</a>
+      <a href="#">About</a>
+    </div>
+
+    <!-- Content area -->  
+    <div class="content">
+    
+      <!-- Text area for input -->
+      <textarea id="textArea" placeholder="Enter or paste your text here"></textarea>
+
+      <!-- Button group -->
+      <div class="button-group">
+        <button class="button">Start Proofreading</button>
+        <button class="button">Apply Suggestions</button>
+  <button class="button" onclick="saveChanges()">Save Changes</button>
+        <button class="button">Export Document</button>
+        <button class="button">User Preferences</button>
+      </div>
+
+      <!-- Report table -->
+      <table class="report">
+        <tr>
+          <th>Error Report</th>
+          <th>Proofreading Summary</th>
+          <th>Performance Stats</th>
+        </tr>
+        <tr>
+          <td>Error report here</td>
+          <td>Summary here</td>
+          <td>Stats here</td>
+        </tr>
+      </table>
+
+    </div>
+
+    <!-- Footer with copyright and contact -->
+    <div class="footer">
+      <p>2023 Intelligent Text Correction Platform. All rights reserved.</p>
+      <p>Contact us: example@example.com</p>
+    </div>
+
+  </div>
+    
+    // Save text to localStorage
+    <script>
+    document.getElementById("saveButton").addEventListener("click", function() {
+      const text = document.getElementById("textArea").value;
+      const blob = new Blob([text], { type: "text/plain" });
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "savedText.txt"; // Change the filename as needed
+      link.click();
+
+      // Clean up the URL object
+      URL.revokeObjectURL(url);
+    });
+  </script>
+  
+</body>
+</html>

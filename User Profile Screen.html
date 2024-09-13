@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile Page</title>
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif; 
+      background-color: lightblue;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .logo {
+      width: 100px; 
+      height: 100px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: white;
+      padding: 10px 0;
+    }
+    
+    .nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      padding: 5px;
+    }
+    
+    .nav a:hover {
+      color: blue;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .profile {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .user-info {
+      flex: 1; 
+    }
+
+    .edit-btn {
+      border: none;
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="header">
+    
+      <img src="logo.png" alt="logo" class="logo">
+      
+      <h1>User Profile Page</h1>
+      
+    </div>
+
+    <div class="nav">
+    
+      <a href="Home Screen.html">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Help</a>
+      <a href="#">About</a>
+    
+    </div>
+
+    <div class="content">
+
+      <div class="profile">
+        
+        <div class="user-info">
+          <h2>User Name</h2>
+          <p>Registered: 2023-08-08</p>
+          <button class="edit-btn">Edit Profile</button>
+        </div>
+        
+      </div>
+
+      <h3>Recent Usage</h3>
+
+      <ul>
+        <li>Record 1</li>
+        <li>Record 2</li>
+        <li>Record 3</li>
+      </ul>
+
+    </div>
+
+    <!-- This is a footer area with copyright info and contact details -->
+    <div class="footer">
+        <p>2023 Intelligent Text Correction Platform. All rights reserved.</p>
+        <p>Contact us: example@example.com</p>
+      </div>
+
+  </div>
+
+</body>
+</html>
